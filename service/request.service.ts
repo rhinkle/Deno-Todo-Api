@@ -12,7 +12,7 @@ export class HttpRequest {
             const body = await response.json();
             return body;
         } catch (error) {
-            throw new Error(error);
+            throw error;
         }
     }
 }
