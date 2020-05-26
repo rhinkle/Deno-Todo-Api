@@ -3,6 +3,11 @@
 ### Description
 This is an example of of a TypeScript api using [Deno Runtime](https://deno.land/).
 
+### Up and running
+* Checkout codebase
+* make sure you have [Deno Runtime](https://deno.land/) installed.
+* To start the API: `deno run --allow-net app.ts`
+
 #### Todo's
 * Add unit tests
 * Build out http calls to include POST
