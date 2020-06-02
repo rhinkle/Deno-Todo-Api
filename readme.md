@@ -9,7 +9,9 @@ This is an example of of a TypeScript api using [Deno Runtime](https://deno.land
 * To start the API: `deno run --allow-net app.ts`
 
 #### Todo's
-* Add unit tests
+* ~~Add unit test~~
+* Add DI
+* Add more unit tests
 * Build out http calls to include POST
 * Add Logging middleware
 * add .env and a config service
