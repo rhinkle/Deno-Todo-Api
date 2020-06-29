@@ -7,15 +7,21 @@ interface ITodo {
   body: string;
 }
 
-const http = new HttpRequest();
+export class TodoService {
+  private httpReq: HttpRequest;
 
-export async function listTodo(): Promise<ITodo[]> {
-  return http.get<ITodo[]>("/todos");
-}
-
-export async function getTodo(id: number): Promise<ITodo> {
-  if (!id) {
-    throw new Error("Missing id");
+  constructor(private http: HttpRequest) {
+    this.httpReq = http;
   }
-  return http.get<ITodo>(`/todos/${id}`);
+
+  public async listTodo(): Promise<ITodo[]> {
+    return this.httpReq.get<ITodo[]>("/todos");
+  }
+  
+  public async getTodo(id: number): Promise<ITodo> {
+    if (!id) {
+      throw new Error("Missing id");
+    }
+    return this.httpReq.get<ITodo>(`/todos/${id}`);
+  }
 }
