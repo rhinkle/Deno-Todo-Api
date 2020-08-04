@@ -1,6 +1,4 @@
-import {
-    assertEquals, assert, assertStrictEquals
-} from "https://deno.land/std/testing/asserts.ts";
+import {assertEquals} from "https://deno.land/std/testing/asserts.ts";
 import { TodoService } from "../todo.service.ts";
 
 Deno.test("getTodoValid", async () => {
@@ -56,5 +54,5 @@ Deno.test('listTodo', async () => {
     };
     const todoService: TodoService = new TodoService(mockHttp);
     const result = todoService.listTodo();
-    assertStrictEquals(resp[0].id, resp[0].id);
+    assertEquals(resp[0].id, resp[0].id);
 });
